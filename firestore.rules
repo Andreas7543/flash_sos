@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /sos_alerts/{alertId} {
+      allow create: if request.resource.data.type == "SOS";
+      allow read, update, delete: if false;
+    }
+  }
+}

@@ -196,3 +196,21 @@ body.light-on .morse-info {
 .hidden {
   display: none;
 }
+.loc-status {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  min-height: 1.2em;
+}
+
+.loc-status.error {
+  color: var(--danger);
+}
+
+body.light-on .loc-status {
+  color: #444;
+}
+
+body.light-on .loc-status.error {
+  color: #c92a2a;
+}
